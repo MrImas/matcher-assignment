@@ -11,6 +11,7 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Job.objects.all();
 
+
 def findMatchingCandidatesForJob(request, job_id):
     job = getJob(job_id)
     number_of_top_matching_candidates = int(request.GET.get('top', 50))
