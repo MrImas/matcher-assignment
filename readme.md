@@ -6,17 +6,17 @@
 
 # Implement a basic web server with MySQL called “matcher”.
 
-# You should create a MySQL connection on port 3307 (or any other port you want just change the setting.py file under /gloatassingment folder)
+### You should create a MySQL connection on port 3307 (or any other port you want just change the setting.py file under /gloatassingment folder)
 
-# create database with the name 'matcher' (again, can change to whatever name you'd like, just change the settings as well)
+### create database with the name 'matcher' (again, can change to whatever name you'd like, just change the settings as well)
 
-# create user 'test_matcher' with password 'test123'
+### create user 'test_matcher' with password 'test123'
 
-# grant all priviliges to the user
+### grant all priviliges to the user
 
-# run in the cmd python manage.py makemigrations
+### run in the cmd python manage.py makemigrations
 
-# run in the cmd python manage.py migrate
+### run in the cmd python manage.py migrate
 
 ## Run the server with the following command:
 
