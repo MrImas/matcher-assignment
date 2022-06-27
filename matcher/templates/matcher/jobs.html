@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs</title>
+  </head>
+  <body>
+    <h2>All Jobs List:</h2>
+    {% if jobs_list %}
+    <ul>
+      {% for job in jobs_list %}
+      <li>
+        <a href="{% url 'candidates' job.id %}">title: {{ job.title }} </a>
+        <br />
+        skills needed: {% if job.skill %}
+        <ul>
+          {% for skill in job.skill.all %}
+          <li>{{ skill.name }}</li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>No Skills needed for the job.</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No jobs are available.</p>
+    {% endif %}
+  </body>
+</html>

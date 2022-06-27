@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candidates</title>
+  </head>
+  <body>
+    <h1>Matching candidates for the job titled '{{job.title}}':</h1>
+    {% if matching_candidates %}
+    <ul>
+      {% for candidate in matching_candidates %}
+      <li>
+        ID: {{ candidate.id }}, title: {{candidate.title}}, number of matching
+        skills: {{candidate.num_matching_skills}}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No matching candidates for the chosen job.</p>
+    {% endif %}
+  </body>
+</html>
